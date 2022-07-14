@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <title>Weather</title>
+</head>
+<style>
+     html {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('back.jpg');
+          background-size: cover;
+
+     }
+
+     div {
+          display: block;
+     }
+
+     .today {
+          position: relative;
+          padding: 20px;
+          color: #E4E4E7;
+          text-align: left;
+          font-size: 25px;
+          font-weight: 100;
+     }
+
+     #weather-info {
+          padding-top: 50px;
+          color: #E4E4E7;
+          text-align: center;
+     }
+
+     #location {
+          font-size: 30px;
+          font-weight: 100;
+     }
+
+     #weather {
+          padding-top: 10px;
+          font-size: 100px;
+     }
+
+     #condition{
+          font-size: 30px;
+          font-weight: 100;
+     }
+
+     #max_min {
+          padding-top: 5px;
+          font-size: 25px;
+          font-weight: 100;
+     }
+
+     .box{
+          margin: 100px auto;
+          width: 330px;
+          height: 50px;
+     }
+     .container-1{
+          width: 300px;
+          vertical-align: middle;
+          white-space: nowrap;
+          position: relative;
+     }
+     .container-1 input#search{
+          width: 300px;
+          height: 50px;
+          background: #2b303b;
+          border: none;
+          font-size: 10pt;
+          float: left;
+          color: #63717f;
+          padding-left: 45px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+     }
+     .container-1 input#search::-webkit-input-placeholder {
+          color: #65737e;
+     }
+        
+       .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+          color: #65737e;  
+     }
+        
+       .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+          color: #65737e;  
+     }
+        
+       .container-1 input#search:-ms-input-placeholder {  
+          color: #65737e;  
+     }
+     .container-1 .icon{
+          position: absolute;
+          top: 50%;
+          margin-left: 17px;
+          margin-top: 17px;
+          z-index: 1;
+          color: #4f5b66;
+     }
+     .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+          outline:none;
+          background: #ffffff;
+     }
+     .container-1 input#search{
+          width: 300px;
+          height: 50px;
+          background: #2b303b;
+          border: none;
+          font-size: 10pt;
+          float: left;
+          color: #262626;
+          padding-left: 45px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+         
+           
+            -webkit-transition: background .55s ease;
+          -moz-transition: background .55s ease;
+          -ms-transition: background .55s ease;
+          -o-transition: background .55s ease;
+          transition: background .55s ease;
+     }
+     
+     .wrap {
+          padding-top: 50px;
+     }
+
+
+
+     @media(max-width: 1260px){
+          html {
+               background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('smallback.jpg');
+               background-size: cover;
+          }
+     }
+</style>
+</head>
+<body>
+     <div class="today"> 
+          <script src="date.js"></script>
+     </div>
+     <div class="wrap">
+          <div id="weather-info">
+               <div id="location"></div>
+               <div id="weather"></div>
+               <div id="condition"></div>
+               <div id="max_min"></div>
+          </div>
+          
+          <script src="weather.js"></script>
+     
+          <div class="box">
+               <div class="container-1">
+                   <span class="icon"><i class="fa fa-search"></i></span>
+                   <form action="https://search.naver.com/search.naver">
+                         <input type="text" name="query" id="search" placeholder="NAVER" / value="">
+                   </form>
+               </div>
+          </div>
+          <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+     </div>
+
+</body>
+</html>
